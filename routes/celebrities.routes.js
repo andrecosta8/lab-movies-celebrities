@@ -22,13 +22,14 @@ router.get("/celebrities/create", (req, res) => {
 
 router.post("/celebrities/create", async (req, res) => {
     try {
-        const userCelebrity = new Celebrity({ name: req.body.name, occupation: req.body.occupation, catchPhrase: req.body.catch-phrase })
+        const userCelebrity = new Celebrity({ name: req.body.name, occupation: req.body.occupation, catchPhrase: req.body.catchPhrase })
+        console.log(userCelebrity + "!!!!!!!!!!!!!!!!!!!")
         await userCelebrity.save();
         res.redirect("/celebrities");
     }
     catch (err) {
         console.log(err + "SOME ERROR")
-        res.redirect("/celebrities/new-celebrity");
+        res.redirect("/celebrities/create");
     }
 })
 
