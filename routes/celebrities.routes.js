@@ -7,7 +7,7 @@ router.get("/celebrities", async (req, res) => {
     try {
         const celebritiesFromDB = await Celebrity.find();
         console.log(celebritiesFromDB);
-        res.render("/celebrities/celebrities", { celebritiesFromDB });
+        res.render("celebrities/celebrities", { celebritiesFromDB });
     }
     catch (err) {
         console.log("error from rendering celebrities overview page", err);
