@@ -10,7 +10,7 @@ router.get("/celebrities", async (req, res) => {
         res.render("/celebrities/celebrities", { celebritiesFromDB });
     }
     catch (err) {
-        console.error(err);
+        console.log("error from rendering celebrities overview page", err);
     }
 
 })
