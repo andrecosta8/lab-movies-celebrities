@@ -1,4 +1,5 @@
 <h2>All Movies</h2>
 {{#each moviesFromDB}}
     <p>Title: {{ this.title }} </p>
+    <button><a href="/movies/{{this._id}}">see Movie Details</a></button>
 {{/each}}
